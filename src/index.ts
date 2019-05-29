@@ -11,6 +11,7 @@ export interface Theme {
   section: {
     header: {
       background: string;
+      color: string;
       padding: string;
     };
   };
@@ -27,6 +28,7 @@ export const defaultTheme: Theme = {
   section: {
     header: {
       background: "#eee",
+      color: "#000",
       padding: "8px"
     }
   }
