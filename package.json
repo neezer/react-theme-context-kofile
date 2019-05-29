@@ -1,7 +1,7 @@
 {
   "name": "@kofile/react-theme-context-kofile",
   "private": false,
-  "version": "0.0.0--semantically-released",
+  "version": "0.0.0-development",
   "main": "dist/index.js",
   "license": "MIT",
   "files": [
@@ -28,11 +28,16 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "preview": "parcel serve preview/index.html",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "semantic-release": "semantic-release"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neezer/react-theme-context-kofile.git"
   }
 }
