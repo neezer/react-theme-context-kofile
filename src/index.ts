@@ -1,6 +1,13 @@
+import Color from "color";
 import { createContext } from "react";
+import { verticalLinearGradient } from "./utils";
 
 export interface Theme {
+  site: {
+    header: {
+      background: string;
+    };
+  };
   contentBlock: {
     padding: string;
   };
@@ -17,6 +24,11 @@ export interface Theme {
   };
 }
 
+/**
+ * Color definitions
+ */
+const baseAccent = Color("#243f8a");
+
 export const defaultTheme: Theme = {
   contentBlock: {
     padding: "25px"
@@ -24,6 +36,14 @@ export const defaultTheme: Theme = {
   contentDivider: {
     color: "#eee",
     strokeWidth: "1px"
+  },
+  site: {
+    header: {
+      background: verticalLinearGradient([
+        [baseAccent.darken(0.3).toString(), "0%"],
+        [baseAccent.toString(), "100%"]
+      ])
+    }
   },
   section: {
     header: {
