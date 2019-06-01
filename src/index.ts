@@ -5,6 +5,7 @@ import { verticalLinearGradient } from "./utils";
 export interface Theme {
   site: {
     header: {
+      color: string;
       background: string;
     };
   };
@@ -37,19 +38,20 @@ export const defaultTheme: Theme = {
     color: "#eee",
     strokeWidth: "1px"
   },
-  site: {
-    header: {
-      background: verticalLinearGradient([
-        [baseAccent.darken(0.3).toString(), "0%"],
-        [baseAccent.toString(), "100%"]
-      ])
-    }
-  },
   section: {
     header: {
       background: "#eee",
       color: "#000",
       padding: "8px"
+    }
+  },
+  site: {
+    header: {
+      background: verticalLinearGradient([
+        [baseAccent.darken(0.3).toString(), "0%"],
+        [baseAccent.toString(), "100%"]
+      ]),
+      color: "#fff"
     }
   }
 };
